@@ -57,14 +57,9 @@ function plainText(property) {
 function toTopic(page, mapping) {
   const properties = page.properties || {};
   const get = key => properties[mapping[key]];
-  const mappedTitle = get('title');
-  // Fall back to Notion's semantic property type when an export has mangled
-  // the title property's display name. This preserves the real page ID and
-  // prevents a valid page from disappearing during normalization.
-  const titleProperty = mappedTitle || Object.values(properties).find(property => property?.type === 'title');
   return {
     topic_id: page.id,
-    title: plainText(titleProperty),
+    title: plainText(get('title')),
     source_date: get('date')?.date?.start || '',
     captured_at: page.last_edited_time || '',
     status: get('lifecycle')?.status?.name || get('lifecycle')?.select?.name || '',
