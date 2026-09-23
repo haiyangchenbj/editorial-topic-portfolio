@@ -36,18 +36,6 @@ def pick(row: dict[str, Any], aliases: list[str]) -> Any:
     for key in aliases:
         if key in row and row[key] not in (None, ""):
             return row[key]
-    # Notion exports can corrupt a property name while preserving its value.
-    # For the title field, accept a single replacement-character key that still
-    # contains the Chinese title marker instead of silently dropping the page.
-    if "title" in aliases:
-        candidates = [
-            key for key, value in row.items()
-            if value not in (None, "")
-            and "\ufffd" in str(key)
-            and "题" in str(key)
-        ]
-        if len(candidates) == 1:
-            return row[candidates[0]]
     return ""
 
 
