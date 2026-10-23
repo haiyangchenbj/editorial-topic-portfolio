@@ -2,7 +2,7 @@
 name: editorial-topic-portfolio
 slug: editorial-topic-portfolio-skill
 displayName: Editorial Topic Portfolio
-version: "1.0.7"
+version: "1.0.8""
 description: >
   This skill should be used when evaluating a portfolio of technology, AI, data,
   cloud, or enterprise-software content topics. It normalizes Notion or
@@ -209,6 +209,7 @@ Convert the primary to an `industry-deep-dive-pipeline` case brief, preserving f
 4. Each round must be 1 primary + 2 backups, unless manually overridden with recorded reason.
 5. Published topics default to `COVERED_TRACK`, unless there is a clear new fact or new judgment.
 6. Watch items must have trigger conditions, required evidence, and review date.
+7. Dedupe before entry: check a candidate topic against the current portfolio for near-duplicates. The same thesis with a different news trigger is not a new topic — extend or replace the existing entry instead.
 7. Use page ID for writes; title must not be the sole write key.
 8. Any Notion writeback requires portfolio confirmation and writeback confirmation.
 9. Credentials, database IDs, personal topics, and private positioning must not enter the generic Skill or public templates.
