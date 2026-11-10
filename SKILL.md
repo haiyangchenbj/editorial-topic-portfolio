@@ -2,7 +2,7 @@
 name: editorial-topic-portfolio
 slug: editorial-topic-portfolio-skill
 displayName: Editorial Topic Portfolio
-version: "1.0.8""
+version: "1.0.9"
 description: >
   This skill should be used when evaluating a portfolio of technology, AI, data,
   cloud, or enterprise-software content topics. It normalizes Notion or
@@ -210,12 +210,12 @@ Convert the primary to an `industry-deep-dive-pipeline` case brief, preserving f
 5. Published topics default to `COVERED_TRACK`, unless there is a clear new fact or new judgment.
 6. Watch items must have trigger conditions, required evidence, and review date.
 7. Dedupe before entry: check a candidate topic against the current portfolio for near-duplicates. The same thesis with a different news trigger is not a new topic — extend or replace the existing entry instead.
-7. Use page ID for writes; title must not be the sole write key.
-8. Any Notion writeback requires portfolio confirmation and writeback confirmation.
-9. Credentials, database IDs, personal topics, and private positioning must not enter the generic Skill or public templates.
-10. First tool failure must retry and cross-validate; after a fix, rerun.
-11. Do not auto-revert adopted, published, or closed status.
-12. Before task completion, record output, verification, residual risk, and next task.
+8. Use page ID for writes; title must not be the sole write key.
+9. Any Notion writeback requires portfolio confirmation and writeback confirmation.
+10. Credentials, database IDs, personal topics, and private positioning must not enter the generic Skill or public templates.
+11. First tool failure must retry and cross-validate; after a fix, rerun.
+12. Do not auto-revert adopted, published, or closed status.
+13. Before task completion, record output, verification, residual risk, and next task.
 
 ## Failure Handling
 
