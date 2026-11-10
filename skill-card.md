@@ -1,6 +1,6 @@
 ## Description:
 
-Evaluates a portfolio of technology, AI, data, cloud, or enterprise-software content topics by normalizing inputs, applying hard gates, scoring eligible topics, selecting one primary topic and two backups, and preparing a confirmed Notion writeback preview.
+Evaluates technology and enterprise-software topic portfolios, prioritizes original and timely stories, and prepares reviewable Notion updates.
 
 This skill is ready for commercial/non-commercial use.
 
@@ -14,7 +14,7 @@ MIT-0
 
 ## Use Case:
 
-Editorial strategists, analysts, and content operators use this skill to evaluate candidate technology topics, choose the current writing portfolio, and prepare reviewed changes for a Notion-backed topic database.
+Content strategists and technology writers use the skill to evaluate a portfolio of technology, AI, data, cloud, and enterprise-software topics, select a primary topic and backups, and prepare a confirmed Notion change preview.
 
 ### Deployment Geography for Use:
 
@@ -22,40 +22,35 @@ Global
 
 ## Known Risks and Mitigations:
 
-Risk: A Notion integration could modify the wrong topic records or fields if writeback is not reviewed.
+Risk: Confidential editorial ideas may be exposed in external research queries before their privacy is checked.
 
-Mitigation: Keep writeback in preview or dry-run until the portfolio, target database, page count, fields, and actions are explicitly approved; use page IDs rather than title matching.
+Mitigation: Use public or sanitized inputs until confidentiality has been checked before each external search.
 
-Risk: Credentials, database IDs, mappings, and private positioning data could be exposed if stored in reusable skill files or logs.
+Risk: Incorrect or unauthorized portfolio changes could affect Notion records.
 
-Mitigation: Keep tokens and mappings outside the skill directory, scope the Notion integration to the topic database, and avoid logging token values or private notes.
-
-Risk: Topic recommendations can be misleading if facts, dates, policy status, product status, or evidence are stale or unverifiable.
-
-Mitigation: Apply the fact, timeliness, originality, argument-capacity, positioning, and privacy gates before scoring; block or hold topics with unresolved evidence gaps.
+Mitigation: Limit access to the intended topic database, require portfolio and writeback confirmation, and verify updates by reading back the changed records.
 
 ## Reference(s):
 
-- [ClawHub Skill Page](https://clawhub.ai/haiyangchenbj/skills/editorial-topic-portfolio-skill)
-- [Evaluation Gates](references/evaluation-gates.md)
-- [Scoring Model](references/scoring-model.md)
-- [Portfolio Rules](references/portfolio-rules.md)
-- [Notion Adapter Interface](references/notion-adapter-interface.md)
-- [Replay Evaluation](references/replay-evaluation.md)
+- [ClawHub skill release](https://clawhub.ai/haiyangchenbj/skills/editorial-topic-portfolio-skill)
+- [Evaluation gates](artifact/references/evaluation-gates.md)
+- [Portfolio rules](artifact/references/portfolio-rules.md)
+- [Scoring model](artifact/references/scoring-model.md)
+- [Notion adapter interface](artifact/references/notion-adapter-interface.md)
 
 ## Skill Output:
 
-**Output Type(s):** [text, markdown, JSON, shell commands, configuration, guidance]
+**Output Type(s):** [Markdown, JSON, Code, Guidance]
 
-**Output Format:** [Markdown reports, JSON records, shell command snippets, and Notion change previews]
+**Output Format:** [Markdown reports and previews, JSON topic and change-set files, and Python or JavaScript helper code.]
 
 **Output Parameters:** [1D]
 
-**Other Properties Related to Output:** [Outputs include gate results, scores, portfolio decisions, change previews, validation records, writeback results, and readback verification.]
+**Other Properties Related to Output:** [Outputs can include topic evaluations, portfolio recommendations, watch conditions, and a reviewable Notion change preview.]
 
 ## Skill Version(s):
 
-1.0.7 (source: server evidence and frontmatter)
+1.0.8 (source: server-resolved release metadata)
 
 ## Ethical Considerations:
 
