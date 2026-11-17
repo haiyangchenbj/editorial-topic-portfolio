@@ -2,7 +2,7 @@
 name: editorial-topic-portfolio
 slug: editorial-topic-portfolio-skill
 displayName: Editorial Topic Portfolio
-version: "1.0.9"
+version: "1.0.10"
 description: >
   This skill should be used when evaluating a portfolio of technology, AI, data,
   cloud, or enterprise-software content topics. It normalizes Notion or
@@ -277,7 +277,7 @@ Each round's report must include: primary, two backups, other dispositions, hard
 - [ ] Each topic has G0—G5 result, base score, deduction, net score, and disposition action.
 - [ ] Each round exactly 1 primary + 2 backups, or explicit manual override.
 - [ ] No internal competition between primary and backups on same event/framework.
-- [ ] Fact blockers did not enter P0/P1.
+- [ ] Fact blockers (G1/G5 BLOCK) did not enter WRITE_NOW or BACKUP.
 - [ ] Change-set uses only page ID or stable topic ID.
 - [ ] Preview, portfolio confirmation, and writeback confirmation all recorded.
 - [ ] Repeated runs do not repeatedly append evaluation blocks.
